@@ -1,0 +1,185 @@
+.s-hero{
+    margin-top: 11.9rem;
+    background-color: $brand-pruple;
+    padding-top: 3.9rem;
+    .container{
+        @include flex(row, flex-start, space-between)
+    }
+    .text{
+        width: 100%;
+        max-width: 55rem;
+        h1{
+            color: $white;
+            font-family: 'PT Sans', sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 120%; 
+            margin-bottom: 1.6rem;
+        }
+        p{
+            color: #FFF;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 150%;
+            max-width: 48.8rem;
+            margin-bottom: 3.2rem;
+        }
+        button{
+            @include style-btn (5.4rem, $secondary, #412a6c);
+            margin-bottom: 8.6rem;
+        }
+        .resources{
+            display: flex;
+            align-items: center;
+            .icon{
+                width: 42px;
+                height: 42px;
+                border-radius: 6px;
+                background: rgba(123, 90, 186, 0.4);
+                @include flex(row, center, center);
+            }
+            span{
+                color: #FFF;
+                font-size: 16px;
+                font-weight: 700;
+                margin-left: 16px;
+            }
+        }
+    }
+    .image{
+        position: relative;
+        top: 7.6rem;
+    }
+    @include responsive(991px){
+        .container{
+            flex-direction: column;
+            .text{
+                max-width: 100%;
+                h1{
+                    text-align: center;
+                }
+                p{
+                    max-width: 100%;
+                    text-align: center;
+                }
+                button{
+                    margin: 0 auto;
+                    display: block;
+                    margin-bottom: 4rem;
+                }
+                .resources{
+                    justify-content: center;
+                    margin-bottom: 4rem;
+                }
+            }
+            .image{
+                margin: 0 auto;
+            }
+        }
+    }
+    @include responsive(600px){
+        padding-top: 2.5rem;
+        margin-top: 8rem;
+        .text{
+            h1{
+                font-size: 4.3rem;
+            }
+        }
+        .image{
+            left: -9px;
+        }
+    }
+}
+
+.s-resources{
+    padding-top: 149px;
+    padding-bottom: 99px;
+    .top{
+        @include flex(row, center, space-between);
+        margin-bottom: 5.3rem;
+        h2{
+            color: $gray-01;
+            font-family: 'PT Sans', sans-serif;
+            font-size: 3.2rem;
+            font-weight: 700;
+            line-height: 130%; 
+            width: 100%;
+            max-width: 502px;
+        }
+        p{
+            color: $gray;
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 150%; 
+        }
+    }
+    .content{
+        @include flex(row, flex-start, space-between);
+        .icon{
+            width: 64px;
+            height: 64px;
+            border-radius: 12px;
+            background: #ededed;
+            @include flex(row, center, center);
+            margin-bottom: 3rem;
+        }
+        .info{
+            max-width: 239px;
+            h4{
+                color: #5F3CA1;
+                font-size: 18px;
+                font-weight: 800;
+                margin-bottom: 20px;
+            }
+            p{
+                color: #5E5570;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 165%; 
+            }
+        }
+        .card-feature{
+            width: 100%;
+            max-width: 280px;
+            height: 323px;
+            background-color:  rgba(197, 190, 220, 0.1);
+            padding-top: 40px;
+            padding-left: 42px;
+            .info{
+                max-width: 204px;
+            }
+        }
+        ul{
+            margin-top: 41px;
+            width: 100%;
+            max-width: 90.4rem;
+            @include flex(row, flex-start, space-between);
+            border-bottom: 3px solid rgba(95, 60, 161, 0.1);
+            padding-bottom: 65px;
+            padding-left: 2rem;
+        }
+        @include responsive(991px) {
+            .content {
+              flex-direction: column;
+              align-items: flex-start;
+        
+              .card-featured {
+                max-width: 100%;
+                height: auto;
+                padding: 3rem;
+                @include flex(column, center, center);
+        
+                .info {
+                  max-width: 100%;
+        
+                  h3,
+                  p {
+                    text-align: center;
+                  }
+                }
+              }
+            }
+          }
+    }
+}
+
